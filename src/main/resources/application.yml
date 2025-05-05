@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: gitlab-spring-boot
+server:
+  servlet:
+    context-path: /gitlab-example
