@@ -9,8 +9,14 @@
 name: Java CI with Maven
 
 on:
-  push:
-    branches: [ "main" ]
+  workflow_dispatch:
+    inputs:
+      execute-maven:
+        description: "Would you like to run maven.yml as well?"
+        required: true
+        type: boolean
+  # push:
+  #  branches: [ "main" ]
   # pull_request:
   #   branches: [ "main" ]
 
