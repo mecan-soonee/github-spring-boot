@@ -20,7 +20,7 @@ jobs:
         run: mvn clean package
 
       - name: Rename the artifact
-        run: cp target/github-spring-boot github-spring-boot-${{ github.sha }}.jar
+        run: cp target/github-spring-boot.jar github-spring-boot-${{ github.sha }}.jar
 
       - name: Save the artifact
         uses: actions/upload-artifact@main
