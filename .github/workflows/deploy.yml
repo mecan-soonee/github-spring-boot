@@ -19,8 +19,9 @@ jobs:
       - name: Unit Tests
         run: mvn clean install
 
-      #- name: Rename the artifact
-      #  run: cp target/github-spring-boot.jar github-spring-boot-${{ github.sha }}.jar
+      - name: Copy the artifact
+        run: cp target/github-spring-boot.jar github-spring-boot.jar
+        # run: cp target/github-spring-boot.jar github-spring-boot-${{ github.sha }}.jar
 
       - name: Save the artifact
         uses: actions/upload-artifact@main
